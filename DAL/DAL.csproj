@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEBE5E76-76AF-417B-AE4F-B9BACC33FD11}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AddressDAO.cs" />
+    <Compile Include="Ads.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdsDAO.cs" />
+    <Compile Include="Category.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryDAO.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Comment.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContactDAO.cs" />
+    <Compile Include="FavDAO.cs" />
+    <Compile Include="FavLogoTitle.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralDAO.cs" />
+    <Compile Include="LogDAL.cs" />
+    <Compile Include="Log_Table.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Meta.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDAO.cs" />
+    <Compile Include="Post.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostContext.cs" />
+    <Compile Include="PostDAO.cs" />
+    <Compile Include="PostImage.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTMODEL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSTMODEL.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTMODEL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTMODEL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSTMODEL.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PostTag.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessType.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocialMedia.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SocialMediaDAO.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_User.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserDAO.cs" />
+    <Compile Include="Video.cs">
+      <DependentUpon>POSTMODEL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VideoDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{2429b7c6-e33f-4c11-acd0-756bd63e367e}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="POSTMODEL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>POSTMODEL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="POSTMODEL.edmx.diagram">
+      <DependentUpon>POSTMODEL.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="POSTMODEL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>POSTMODEL.edmx</DependentUpon>
+      <LastGenOutput>POSTMODEL.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="POSTMODEL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>POSTMODEL.edmx</DependentUpon>
+      <LastGenOutput>POSTMODEL.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

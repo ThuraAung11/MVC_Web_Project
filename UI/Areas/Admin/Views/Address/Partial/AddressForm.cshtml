@@ -1,0 +1,36 @@
+﻿@model DTO.AddressDTO
+    
+<div class="box-body">
+    <div class="form-group">
+        <label>AddressConten</label>
+        @Html.TextBoxFor(x => x.AddressContent, new { @class = "form-control", @placeholder = "AddressContent" })
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control", @placeholder = "Email" })
+    </div>
+    <div class="form-group">
+        <label>Phone</label>
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", @placeholder = "Phone" })
+    </div>
+    <div class="form-group">
+        <label>Phone2</label>
+        @Html.TextBoxFor(x => x.Phone2, new { @class = "form-control", @placeholder = "Phone2" })
+    </div>
+    <div class="form-group">
+        <label>Fax</label>
+        @Html.TextBoxFor(x => x.Fax, new { @class = "form-control", @placeholder = "Fax" })
+    </div>
+    <div class="form-group">
+        <label>Big Map Path</label>
+        @Html.TextAreaFor(x => x.LargeMapPath, new { @class = "form-control", @placeholder = "Big Map Path" })
+    </div>
+    <div class="form-group">
+        <label>Small Map Path</label>
+        @Html.TextAreaFor(x => x.SmallMapPath, new { @class = "form-control", @placeholder = "Small Map Path" })
+    </div>
+    <input type="number" hidden name="ID" value="@Model.ID" />
+    <div class="card-footer">
+        <button class="btn btn-primary" type="submit">Save</button>
+    </div>
+</div>

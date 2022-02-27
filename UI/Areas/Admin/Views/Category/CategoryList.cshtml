@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "CategoryList";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
+}
+
+@model List<DTO.CategoryDTO>
+<section class="content-header">
+    <h1>Category List</h1>
+    <ol class="breadcrumb float-sm-left">
+        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+        <li class="breadcrumb-item"><a href="#">Category List</a></li>
+        <li class="breadcrumb-item active"><a href="#">Category List</a></li>
+    </ol>
+</section>
+<br />
+
+<div class="card-footer">
+    <button type="submit" class="btn btn-primary" onclick="window.location.href='/Admin/Category/AddCategory'">Add Category</button>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">DataTable with default features</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tbody>
+                    <tr id="a_@item.ID">
+
+                        <td>@item.CategoryName</td>
+
+                        <td align="center" valign="middle">
+                            <a href="/Admin/Category/UpdateCategory/@item.ID">
+                                <br />
+                                <img src="~/Areas/Admin/Content/icon/update_left_rotation_25px.png" />
+                            </a>
+                        </td>
+                        <td align="center" valign="middle">
+                            <a href="#">
+                                <br />
+                                <img src="~/Areas/Admin/Content/icon/cancel_25px.png" onclick="AskQuestion('/Admin/Category/DeleteCategory/',@item.ID)"/>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+
+            <tfoot>
+                <tr>
+                    <th>Name</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    @Html.Partial("~/Areas/Admin/Views/Shared/ModalMessages.cshtml")
+    <!-- /.card-body -->
+</div>
+<!-- /.card -->
+<script src="~/Areas/Admin/Content/JS/DeleteRecord.js"></script>
